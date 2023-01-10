@@ -1,0 +1,32 @@
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 1rem 2rem;
+}
+
+a {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+}
+
+.footer{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgb(235, 195, 64);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
