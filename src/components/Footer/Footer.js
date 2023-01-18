@@ -6,21 +6,25 @@ import Button from '@mui/material/Button';
 
 function Footer() {
     return (
-        <>
+        <div>
             <div className="footer" >
 
-                <div>
-                    <nav className="Footer">
+                <nav className='left'>
+                   
                         <ul>
                             <li>
-                                <a href="/" className='game'> Hem </a>
+                                <a href="/"> Hem </a>
                             </li>
                             <li>
-                                <a href="http://localhost:3000" className="highscore"> Hem </a>
+                                <a href="http://localhost:3000"> Hem </a>
                             </li>
                             <li>
-                                <a href="http://localhost:3000" className="info"> Hem </a>
+                                <a href="http://localhost:3000"> Hem </a>
                             </li>
+                            </ul>
+                            </nav>
+                            <nav className='right'>
+                            <ul>
                             <li>
                                 <Button variant="outlined" a href="http://www.instagram.com">
                                     <InstagramIcon sx={{ fontSize: '46px' }} />
@@ -37,10 +41,11 @@ function Footer() {
                                 </Button>
                             </li>
                         </ul>
-                    </nav>
+                        </nav>
+                   
                 </div>
             </div>
-        </>
+        
     )
 }
 

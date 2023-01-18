@@ -6,6 +6,15 @@ ul{
     padding: 0;
 }
 
+.left ul {
+    float: left;
+}
+
+.right ul {
+    float: right;
+    padding: 2rem ;
+}
+
 li {
     padding: 1rem 2rem;
 }
@@ -29,4 +38,7 @@ a:hover {
     bottom: 0;
     left: 0;
     width: 100%;
+    justify-content: space-between;
+    
+    
   }
