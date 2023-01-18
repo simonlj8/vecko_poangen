@@ -1,19 +1,18 @@
 ul{
-    overflow: hidden; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     list-style: none;
     padding: 0;
-    width: 50%;
+}
+
+.left ul {
     float: left;
 }
 
-ul:left, li {
-    float: left;
-    display: flex;
-}
-
-ul:right, li {
+.right ul {
     float: right;
-    display: inline;
+    padding: 2rem ;
 }
 
 li {
@@ -37,7 +36,9 @@ a:hover {
     background-color: rgb(235, 195, 64);
     position: fixed;
     bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
     
-    width: 100%;  
-    display: block; 
+    
   }

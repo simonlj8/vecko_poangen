@@ -6,12 +6,12 @@ import Button from '@mui/material/Button';
 
 function Footer() {
     return (
-        <>
+        <div>
             <div className="footer" >
 
-                <div>
+                <nav className='left'>
                    
-                        <ul className='left'>
+                        <ul>
                             <li>
                                 <a href="/"> Hem </a>
                             </li>
@@ -22,7 +22,9 @@ function Footer() {
                                 <a href="http://localhost:3000"> Hem </a>
                             </li>
                             </ul>
-                            <ul className='right'>
+                            </nav>
+                            <nav className='right'>
+                            <ul>
                             <li>
                                 <Button variant="outlined" a href="http://www.instagram.com">
                                     <InstagramIcon sx={{ fontSize: '46px' }} />
@@ -39,10 +41,11 @@ function Footer() {
                                 </Button>
                             </li>
                         </ul>
+                        </nav>
                    
                 </div>
             </div>
-        </>
+        
     )
 }
 
