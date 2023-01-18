@@ -8,7 +8,7 @@ function App() {
     <div className="App">    
         <Header />
         <p>
-          Edit  and save to reloadad.
+         NYTT
         </p>
         <a
           className="App-link"
