@@ -1,0 +1,20 @@
+.header {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 1rem;
+    background-color: rgb(235, 195, 64);
+    column-gap: 250px;
+    list-style: none;
+}
+
+
+.logo {
+    
+    
+}
+
+.header button {
+    
+    padding: 1rem;
+    
+}
