@@ -16,7 +16,7 @@ function Footer() {
                                 <a href="/"> Hem </a>
                             </li>
                             <li>
-                                <a href="http://localhost:3000"> Hem </a>
+                                <a href="http://localhost:5000/login"> Hem </a>
                             </li>
                             <li>
                                 <a href="http://localhost:3000"> Hem </a>
@@ -27,17 +27,17 @@ function Footer() {
                             <ul>
                             <li>
                                 <Button variant="outlined" a href="http://www.instagram.com">
-                                    <InstagramIcon sx={{ fontSize: '46px' }} />
+                                    <InstagramIcon sx={{ fontSize: '36px' }} />
                                 </Button>
                             </li>
                             <li>
                                 <Button variant="outlined" a href="http://www.facebook.se">
-                                    <FacebookIcon sx={{ fontSize: '46px' }} />
+                                    <FacebookIcon sx={{ fontSize: '36px' }} />
                                 </Button>
                             </li>
                             <li>
                                 <Button variant="outlined" a href="http://www.linkedin.com">
-                                    <LinkedInIcon sx={{ fontSize: '46px' }} />
+                                    <LinkedInIcon sx={{ fontSize: '36px' }} />
                                 </Button>
                             </li>
                         </ul>

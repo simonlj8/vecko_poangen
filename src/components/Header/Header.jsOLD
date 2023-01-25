@@ -1,0 +1,22 @@
+import { DropdownButton } from 'react-bootstrap';
+import Dropdown from 'react-bootstrap/Dropdown';
+import './Header.css';
+
+function Header() {
+    return (
+        <div className='header'>
+            <div className='button'>
+                <DropdownButton id="dropdown-basic-button" title="Logga in / Registrera">
+                    <Dropdown.Item href="#/action-1">Logga in</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">Registrera</Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                </DropdownButton>
+            </div>
+            <div className="logo" style={{ fontSize: '3.5em' }}>【﻿Ｖｅｃｋｏｐｏäｎｇｅｎ】
+
+            </div>
+        </div>
+    );
+}
+
+export default Header;
