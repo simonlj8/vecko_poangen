@@ -1,4 +1,7 @@
-const express = require('express');
+import express from 'express';
+import fs from 'fs/promises'
+
+//const express = require('express');
 const app = express();
 const port = 5000;
 
@@ -19,6 +22,12 @@ app.get('/', (req, res) => {
 app.get('/logins', (req, res) => {
     res.send("logins")
 })
+
+app.get('/info', async (req, res) => {
+    const fileBuf = await fs.readFile('./static/info.html');
+    res.type('html');
+    res.send(fileBuf);
+  });
 
 app.post('/post', (req, res) => {
     res.send('Post World')

@@ -12,9 +12,9 @@ function BasicExample() {
           <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/login">Hem</Nav.Link>
-            <Nav.Link href="#link">Om</Nav.Link>
+            <Nav.Link href="localhost:5000/info">Om</Nav.Link>
             <NavDropdown title="Menu" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/login">Logga in</NavDropdown.Item>
+              <NavDropdown.Item href="http://localhost:5080/info">Logga in</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Registrera
               </NavDropdown.Item>
