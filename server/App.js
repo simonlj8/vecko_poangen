@@ -6,7 +6,8 @@ const app = express();
 const port = 5000;
 
 app.use(express.json());
-app.use(express.static("../src/components/login/"))
+app.use(express.static("../build"))
+
 
 app.get("/login", async (req, res) => {
     const filebuf = await fs.readFile("../src/components/login/login.js");
@@ -15,9 +16,9 @@ app.get("/login", async (req, res) => {
   });
   
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+//app.get('/', (req, res) => {
+ //   res.send('Hello World!')
+//})
 
 app.get('/logins', (req, res) => {
     res.send("logins")

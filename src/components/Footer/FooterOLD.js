@@ -1,5 +1,4 @@
-import React from "react";
-import "./Footer.css";
+import './Footer.css'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -7,29 +6,25 @@ import Button from '@mui/material/Button';
 
 function Footer() {
     return (
-        <div className="footer">
-            <div className="container">
-                <div className="row">
+        <div>
+            <div className="footer" >
 
-                
-                    <div className="col">
-                        <h4>Info</h4>
-                        <ul className="list-unstyled">
+                <nav className='left'>
+                   
+                        <ul>
                             <li>
-                                <a href="/info">Om oss</a>
+                                <a href="/"> Hem </a>
                             </li>
                             <li>
-                                <a href="/">Logga in</a>
+                                <a href="http://localhost:5000/login"> Hem </a>
                             </li>
                             <li>
-                                <a href="/">Kontakt</a>
+                                <a href="http://localhost:3000"> Hem </a>
                             </li>
-                        </ul>
-                    </div>
-
-                    <div className="col">
-                        <h4>Social Media</h4>
-                        <ul className="list-unstyled">
+                            </ul>
+                            </nav>
+                            <nav className='right'>
+                            <ul>
                             <li>
                                 <Button variant="outlined" a href="http://www.instagram.com">
                                     <InstagramIcon sx={{ fontSize: '36px' }} />
@@ -46,18 +41,12 @@ function Footer() {
                                 </Button>
                             </li>
                         </ul>
-                    </div>
-                </div>
-                <hr />
-                <div className="row">
-                    <p className="col-sm">
-                        &copy;{new Date().getFullYear()} VecoPoängen | All rights reserved |
-                        Terms Of Service | Privacy
-                    </p>
+                        </nav>
+                   
                 </div>
             </div>
-        </div>
-    );
+        
+    )
 }
 
 export default Footer;
