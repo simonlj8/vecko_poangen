@@ -32,7 +32,7 @@ a:hover {
 }
 
 .footer{
-    margin-top: 1rem;
+    margin-top: auto;
     padding: 1rem;
     background-color: rgb(235, 195, 64);
     position: fixed;
@@ -40,6 +40,7 @@ a:hover {
     left: 0;
     width: 100%;
     justify-content: space-between;
+    overflow-y: auto;
     
     
   }
