@@ -13,11 +13,11 @@ app.get("/login", async (req, res) => {
     const filebuf = await fs.readFile("../src/components/login/login.js");
     res.type("html");
     res.send(filebuf);
-  });
-  
+});
+
 
 //app.get('/', (req, res) => {
- //   res.send('Hello World!')
+//   res.send('Hello World!')
 //})
 
 app.get('/logins', (req, res) => {
@@ -28,7 +28,7 @@ app.get('/info', async (req, res) => {
     const fileBuf = await fs.readFile('./static/info.html');
     res.type('html');
     res.send(fileBuf);
-  });
+});
 
 app.post('/post', (req, res) => {
     res.send('Post World')

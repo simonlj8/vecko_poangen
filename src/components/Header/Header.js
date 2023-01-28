@@ -1,10 +1,11 @@
+import { NavLink } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from './vecko.jpg';
+import logo from '../../img/vecko.jpg';
 
-function BasicExample() {
+function Header(form) {
   return (
     <div className='header'>
       <Navbar bg="grey" expand="lg">
@@ -12,14 +13,14 @@ function BasicExample() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/login">Hem</Nav.Link>
-              <Nav.Link href="localhost:5000/info">Om</Nav.Link>
+              <Nav.Link href="/">Hem</Nav.Link>
+              <Nav.Link href="/info">Om</Nav.Link>
               <NavDropdown title="Menu" id="basic-nav-dropdown">
-                <NavDropdown.Item href="http://localhost:5080/info">Logga in</NavDropdown.Item>
+                <NavDropdown.Item href="/info">Logga in</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Registrera
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Poäng</NavDropdown.Item>
+                <NavDropdown.Item><NavLink eventKey={form} href="#action/3.3">Poäng </NavLink> </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
                   Logga ut
@@ -47,4 +48,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default Header;

@@ -1,54 +1,64 @@
 import './App.css';
-import Navbar from './components/Footer/Footer';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LogIn from './components/Login/Login';
 import React, { useState, useEffect } from 'react';
 
 function App() {
-  const [mainPage, setMainPage] = useState('start')
+  const [startPage, setStartPage] = useState('start')
+  const [mainPage, setMainPage] = useState('login');
   //const [LoginPage, setLoginPage] = useState('loginPage');
   //const [StartPage, setStartPage] = useState('start')
 
   const handleSubmit = () => {
-    setMainPage('login');
-  return;
+    setStartPage('login');
+    return;
   }
-  
 
-  if (mainPage === 'start') { 
+
+  if (startPage === 'start') {
     return (
-      <div className="App">    
-          <Header />
-          <p>          
+      <div className="App">
+        <Header />
+        <p>
           <button onClick={handleSubmit}>Logga in</button>
-          </p>
-           <h1>TEST</h1>         
-        
-        <footer>
-        
-          <Navbar />
-        </footer>
+        </p>
+        <h1>TEST</h1>
+
+        <Footer />
+
+
+
       </div>
     );
   }
 
 
-
-
-  if (mainPage === 'login') { 
-  return (
-    <div className="App">    
+  if (startPage === 'login') {
+    return (
+      <div className="App">
         <Header />
         <p>
-       
+
         </p>
-        
+
         <LogIn />
-      <footer>
-        <Navbar />
-      </footer>
-    </div>
-  );
-}
+        <Footer />
+
+
+      </div>
+    );
+  }
+
+  if (startPage === 'form') {
+    return (
+      <div className="App">
+      <Header />
+
+      <Footer />
+      
+      </div>
+    )
+  }
 }
 export default App;
