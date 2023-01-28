@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../../img/vecko.jpg';
 
-function Header(form) {
+function Header() {
   return (
     <div className='header'>
       <Navbar bg="grey" expand="lg">
@@ -20,7 +20,7 @@ function Header(form) {
                 <NavDropdown.Item href="#action/3.2">
                   Registrera
                 </NavDropdown.Item>
-                <NavDropdown.Item><NavLink eventKey={form} href="#action/3.3">Poäng </NavLink> </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Poäng  </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
                   Logga ut
