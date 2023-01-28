@@ -2,16 +2,24 @@ import './App.css';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LogIn from './components/Login/Login';
+import SignUp from './components/SignUp/SignUp';
 import React, { useState, useEffect } from 'react';
+import MainPage from './components/MainPage/MainPage';
 
 function App() {
   const [startPage, setStartPage] = useState('start')
   const [mainPage, setMainPage] = useState('login');
+  const [SignUpPage, setSignUpPage] = useState('signup')
   //const [LoginPage, setLoginPage] = useState('loginPage');
   //const [StartPage, setStartPage] = useState('start')
 
   const handleSubmit = () => {
     setStartPage('login');
+    return;
+  }
+
+  const handleSubmit2 = () => {
+    setStartPage('signup');
     return;
   }
 
@@ -24,11 +32,13 @@ function App() {
           <button onClick={handleSubmit}>Logga in</button>
         </p>
         <h1>TEST</h1>
-
+        <p>
+          <button onClick={handleSubmit2}>Registrera</button>
+        </p>
+        <p>
+        <MainPage />
+        </p>
         <Footer />
-
-
-
       </div>
     );
   }
@@ -39,24 +49,19 @@ function App() {
       <div className="App">
         <Header />
         <p>
-
         </p>
-
         <LogIn />
         <Footer />
-
-
       </div>
     );
   }
 
-  if (startPage === 'form') {
+  if (startPage === 'signup') {
     return (
       <div className="App">
-      <Header />
-
-      <Footer />
-      
+        <Header />
+        <SignUp />
+        <Footer />
       </div>
     )
   }
