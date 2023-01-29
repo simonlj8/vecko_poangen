@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/simonlj8/vecko_poangen#readme",
   "dependencies": {
+    "mongoose": "^6.9.0",
     "nodemon": "^2.0.20"
   }
 }
