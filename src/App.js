@@ -13,28 +13,12 @@ function App() {
   //const [LoginPage, setLoginPage] = useState('loginPage');
   //const [StartPage, setStartPage] = useState('start')
 
-  const handleSubmit = () => {
-    setStartPage('login');
-    return;
-  }
-
-  const handleSubmit2 = () => {
-    setStartPage('signup');
-    return;
-  }
-
+ 
 
   if (startPage === 'start') {
     return (
       <div className="App">
-        <Header />
-        <p>
-          <button onClick={handleSubmit}>Logga in</button>
-        </p>
-        <h1>TEST</h1>
-        <p>
-          <button onClick={handleSubmit2}>Registrera</button>
-        </p>
+        <Header />            
         <p>
         <MainPage />
         </p>
@@ -43,7 +27,7 @@ function App() {
     );
   }
 
-
+/*
   if (startPage === 'login') {
     return (
       <div className="App">
@@ -64,6 +48,6 @@ function App() {
         <Footer />
       </div>
     )
-  }
+  }*/
 }
 export default App;
