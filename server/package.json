@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/simonlj8/vecko_poangen#readme",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "mongoose": "^6.9.0",
     "nodemon": "^2.0.20"
   }
