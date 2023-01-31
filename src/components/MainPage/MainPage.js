@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import LogIn from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
-import '../../App.css'
+import '../../App.css';
+import Button from 'react-bootstrap/Button';
 
 
 
@@ -30,11 +31,12 @@ function MainPage() {
         return (
             <div className="App">
                 <p>
-                    <button onClick={handleSubmit}>Logga in</button>
+                    <Button variant="primary" size="lg" active onClick={handleSubmit}>Logga in</Button>
                 </p>
                 <p>
-                    <button onClick={handleSubmit2}>Registrera</button>
+                    <Button variant="secondary" size="lg" active onClick={handleSubmit2}>Registrera</Button>
                 </p>
+             
             </div>
         );
     }
