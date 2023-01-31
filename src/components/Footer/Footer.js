@@ -19,14 +19,14 @@ function Footer() {
                         <ul className="list-unstyled">
                             <li>
                                 <a href="/info">Om oss</a>
-                            </li>                           
+                            </li>
                             <li>
                                 <a href="/">Kontakt</a>
                             </li>
                         </ul>
                     </div>
 
-                    <div className="col">                        
+                    <div className="col">
                         <img src={sm} alt="Logo" />
                         <ul className="list-unstyled">
                             <li>
