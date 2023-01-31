@@ -3,6 +3,8 @@ import LogIn from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
 import '../../App.css';
 import Button from 'react-bootstrap/Button';
+import Tasks from '../Tasks/Tasks'
+import Footer from '../Footer/Footer'
 
 
 
@@ -16,6 +18,7 @@ function MainPage() {
      }*/
 
 
+
     const handleSubmit = () => {
         setMainPage('login');
         return;
@@ -26,17 +29,24 @@ function MainPage() {
         return;
     }
 
+    const handleSubmit3 = () => {
+        setMainPage('points');
+    }
+
 
     if (mainPage === 'start') {
         return (
             <div className="App">
                 <p>
-                    <Button variant="primary" size="lg" active onClick={handleSubmit}>Logga in</Button>
+                    <Button variant="primary" size="lg" active onClick={handleSubmit}>Logga in användare</Button>
                 </p>
                 <p>
-                    <Button variant="secondary" size="lg" active onClick={handleSubmit2}>Registrera</Button>
+                    <Button variant="secondary" size="lg" active onClick={handleSubmit2}>Registrera användare</Button>
                 </p>
-             
+                <p>
+                    <Button variant="secondary" size="lg" active onClick={handleSubmit3}>Registrera Poäng</Button>
+                </p>
+
             </div>
         );
     }
@@ -44,7 +54,7 @@ function MainPage() {
 
     if (mainPage === 'login') {
         return (
-            <div className="App">               
+            <div className="App">
                 <LogIn />
             </div>
         );
@@ -54,6 +64,14 @@ function MainPage() {
         return (
             <div className="App">
                 <SignUp />
+            </div>
+        )
+    }
+
+    if (mainPage === 'points') {
+        return (
+            <div className="App">
+                <Tasks />
             </div>
         )
     }
