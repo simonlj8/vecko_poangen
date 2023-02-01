@@ -1,4 +1,4 @@
-import { useState, useEffect  } from "react";
+import { useState, useEffect } from "react";
 import LogIn from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
 import '../../App.css';
@@ -7,19 +7,8 @@ import Tasks from '../Tasks/Tasks'
 import './MainPage.css';
 
 
-
-
-
 function MainPage() {
-    const [mainPage, setMainPage] = useState('start');
-    //const [startPage, setStartPage] = useState('login')
-
-    /* const handleSubmitSignUp = (e) => {
-       e.preventDefault();
-       setStartPage=('signup');
-     }*/
-
-
+    const [mainPage, setMainPage] = useState('start');  
 
     const handleSubmit = () => {
         setMainPage('login');
@@ -38,20 +27,20 @@ function MainPage() {
 
     if (mainPage === 'start') {
         return (
-            <div>           
-            <div className="App">
-            <div className="choose">
-                <p>
-                    <Button id="btn1" variant="primary" size="lg" active onClick={handleSubmit}>Logga in användare</Button>
-                </p>
-                <p>
-                    <Button id="btn2" variant="primary" size="lg" active onClick={handleSubmit2}>Registrera användare</Button>
-                </p>
-                <p>
-                    <Button id="btn3" variant="primary" size="lg" active onClick={handleSubmit3}>Registrera Poäng</Button>
-                </p>
+            <div>
+                <div className="App">
+                    <div className="choose">
+                        <p>
+                            <Button id="btn1" variant="primary" size="lg" active onClick={handleSubmit}>Logga in användare</Button>
+                        </p>
+                        <p>
+                            <Button id="btn2" variant="primary" size="lg" active onClick={handleSubmit2}>Registrera användare</Button>
+                        </p>
+                        <p>
+                            <Button id="btn3" variant="primary" size="lg" active onClick={handleSubmit3}>Registrera Poäng</Button>
+                        </p>
+                    </div>
                 </div>
-            </div>
             </div>
         );
     }
