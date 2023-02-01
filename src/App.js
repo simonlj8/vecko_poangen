@@ -7,7 +7,6 @@ import MainPage from './components/MainPage/MainPage';
 
 function App() {
   const [startPage, setStartPage] = useState('start');
-  const [username, setusername] = useState('');
 
 
   if (startPage === 'start') {

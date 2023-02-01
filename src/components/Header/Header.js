@@ -1,9 +1,10 @@
-import { NavLink } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../../img/vecko.jpg';
+
+
 
 function Header() {
   return (
@@ -16,7 +17,7 @@ function Header() {
               <Nav.Link href="/">Hem</Nav.Link>
               <Nav.Link href="/info">Om</Nav.Link>
               <NavDropdown title="Menu" id="basic-nav-dropdown">
-                <NavDropdown.Item as={NavLink} href="/login">Logga in</NavDropdown.Item>
+                <NavDropdown.Item href="/login">Logga in</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Registrera
                 </NavDropdown.Item>

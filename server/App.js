@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Router } from 'express';
 import fs from 'fs/promises'
 import cors from 'cors';
 import 'dotenv/config'
@@ -44,7 +44,7 @@ app.post('/post', (req, res) => {
     let task = req.body.task;
     let points = req.body.points;
 
-    let newtask = new TaskModel({ name: name, task: task, points, points })
+    let newtask = new TaskModel({ name: name, task: task, points})
     res.send("New add to database")
     newtask.save();
     console.log(newtask)
@@ -85,8 +85,7 @@ app.get('/', (req, res) => {
 app.get('/api/info', (req, res) => {
     const fileBuf = fs.readFile('./static/info.html');
     res.type('html');
-    // res.send(fileBuf);
-    res.send("Hello World");
+    res.send(fileBuf);    
 });
 
 app.post('/api/validate', (req, res) => {
@@ -94,11 +93,22 @@ app.post('/api/validate', (req, res) => {
     let points = req.body.points
     let task = req.body.task
 
-    let newtask2 = new TaskModel({ name: name, task: task, points, points })
+    let newtask2 = new TaskModel({ name: name, task: task, points})
     res.send("New add to database")
     newtask2.save();
     console.log(newtask2)
 
+})
+
+app.get('/api/getinfo', function(req, res){
+    TaskModel.find({}, function(err, documents){
+        if(err){
+            res.send('Something wrong');
+        }
+        else{
+            res.send(documents);
+        }
+    })
 })
 app.listen(port, (req, res) => {
     console.log(`App listening on port ${port}`)

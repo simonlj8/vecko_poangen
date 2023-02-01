@@ -60,9 +60,9 @@ function Tasks() {
                 </div>
             </div>
             <div className='submitButton'>
-                <Button variant="success" onClick={setData}>Lägg till</Button>{' '}
+                <Button variant="success" onClick={setData}>Lägg till</Button>
             </div>
-            <TasksList />
+            <TasksList />           
         </div>
     );
 
