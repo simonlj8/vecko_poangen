@@ -2,14 +2,14 @@ import './App.css';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import MainPage from './components/MainPage/MainPage';
 import axios from 'axios';
 
 function App() {
   const [startPage, setStartPage] = useState('start');
-  const [mainPage, setMainPage] = useState('login');
-  const [SignUpPage, setSignUpPage] = useState('signup');
+ // const [mainPage, setMainPage] = useState('login');
+ // const [SignUpPage, setSignUpPage] = useState('signup');
   //const [LoginPage, setLoginPage] = useState('loginPage');
   //const [StartPage, setStartPage] = useState('start')
   const [username, setusername] = useState('');
@@ -35,10 +35,10 @@ function App() {
   if (startPage === 'start') {
     return (
       <div className="App">
-        <Header />
-        <button onClick={getData}>Test Button</button>
+       <Header />
+       {/*} <button onClick={getData}>Test Button</button>
         <input type="text" value={username} onChange={(e) => { setusername(e.target.value) }}></input>
-        <button onClick={sendData}>Send data</button>
+    <button onClick={sendData}>Send data</button>*/}
         <MainPage />
         <Footer />
       </div>

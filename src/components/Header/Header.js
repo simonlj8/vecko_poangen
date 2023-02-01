@@ -16,7 +16,7 @@ function Header() {
               <Nav.Link href="/">Hem</Nav.Link>
               <Nav.Link href="/info">Om</Nav.Link>
               <NavDropdown title="Menu" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/info">Logga in</NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} href="/login">Logga in</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Registrera
                 </NavDropdown.Item>
