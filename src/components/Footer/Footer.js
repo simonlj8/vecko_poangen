@@ -12,8 +12,6 @@ function Footer() {
         <div className="footer">
             <div className="container">
                 <div className="row">
-
-
                     <div className="col">
                         <img src={info} alt="Info" />
                         <ul className="list-unstyled">
@@ -25,7 +23,6 @@ function Footer() {
                             </li>
                         </ul>
                     </div>
-
                     <div className="col">
                         <img src={sm} alt="Logo" />
                         <ul className="list-unstyled">

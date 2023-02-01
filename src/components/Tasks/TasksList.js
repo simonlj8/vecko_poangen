@@ -3,8 +3,7 @@ import Table from 'react-bootstrap/Table'
 
 function TasksList() {
     return (
-        <div>
-            
+        <div>           
 
             <Table className="table" striped bordered hover>
             

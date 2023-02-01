@@ -5,11 +5,7 @@ import 'dotenv/config'
 import mongoose from 'mongoose';
 import axios from 'axios';
 import bodyParser from 'body-parser';
-import { Password } from '@mui/icons-material';
 
-
-
-// const express = require('express');
 const app = express();
 const port = 5000;
 const uri = process.env.DATABASE_CONNECT;
@@ -43,7 +39,7 @@ const TaskModel = mongoose.model("tasks", {
     password: String
 })
 
-app.post('/post', (req, res) => {    
+app.post('/post', (req, res) => {
     let name = req.body.name;
     let task = req.body.task;
     let points = req.body.points;
@@ -66,19 +62,6 @@ app.get('/tasks', (req, res) => {
     })
 })
 
-app.post('/delete', (req, res) => {
-    TaskModel.find({
-        name: req.body.name
-    }, function (err, documents) {
-        if (err) {
-            res.send('Deleting failed')
-        }
-        else {
-            res.send('Deleted')
-        }
-    })
-})
-
 app.get('/getpoints', (req, res) => {
     TaskModel.find({
         points: req.body.points
@@ -91,33 +74,13 @@ app.get('/getpoints', (req, res) => {
         }
     }
     );
- 
-    
-//res.send('home', {points});
 })
-
-app.get("/login", (req, res) => {
-    const filebuf = fs.readFile("../../components/Login/Login.js");
-    res.type("html");
-    res.send(filebuf);
-});
 
 
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.get('/logins', (req, res) => {
-    TaskModel.find({}, function (err, documents) {
-        if (err) {
-            res.send('error');
-        }
-        else {
-            res.send(documents);
-        }
-    })
-
-})
 
 app.get('/api/info', (req, res) => {
     const fileBuf = fs.readFile('./static/info.html');
@@ -127,7 +90,7 @@ app.get('/api/info', (req, res) => {
 });
 
 app.post('/api/validate', (req, res) => {
-    let name = req.body.name   
+    let name = req.body.name
     let points = req.body.points
     let task = req.body.task
 
@@ -135,10 +98,8 @@ app.post('/api/validate', (req, res) => {
     res.send("New add to database")
     newtask2.save();
     console.log(newtask2)
-    
+
 })
-
-
 app.listen(port, (req, res) => {
     console.log(`App listening on port ${port}`)
 })
