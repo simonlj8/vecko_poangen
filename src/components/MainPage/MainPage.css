@@ -1,0 +1,20 @@
+.choose {
+    display: flex;   
+    flex-direction: row;
+    justify-content: center;
+    padding: 4rem;
+    
+}
+
+#btn1 {
+    margin-left: 100px;
+}
+
+#btn2 {
+    margin-left: 100px;
+}
+
+#btn3 {
+    margin-left: 100px;
+}
+

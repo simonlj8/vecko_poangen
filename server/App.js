@@ -5,6 +5,7 @@ import 'dotenv/config'
 import mongoose from 'mongoose';
 import axios from 'axios';
 import bodyParser from 'body-parser';
+import { Password } from '@mui/icons-material';
 
 
 
@@ -28,11 +29,6 @@ mongoose.connect(uri, {
         console.log('Connected')
     }
 })
-/*
-const connection = mongoose.connection;
-connection.once('open', () => {
-    console.log("Connection!")
-})*/
 
 app.use(cors())
 
@@ -42,11 +38,12 @@ app.use(express.static("../build"))
 const TaskModel = mongoose.model("tasks", {
     name: String,
     task: String,
-    points: Number
+    points: Number,
+    user: String,
+    password: String
 })
 
-app.post('/post', (req, res) => {
-    // res.send('Post World')
+app.post('/post', (req, res) => {    
     let name = req.body.name;
     let task = req.body.task;
     let points = req.body.points;
@@ -83,21 +80,24 @@ app.post('/delete', (req, res) => {
 })
 
 app.get('/getpoints', (req, res) => {
-  TaskModel.find({
-    
-    points: 10
-  }, function (err, document) {
-    if (err) {
-        res.send('fail')
-    } 
-    else {
-        res.send(points)
+    TaskModel.find({
+        points: req.body.points
+    }, function (err, documents) {
+        if (err) {
+            res.send('failed')
+        }
+        else {
+            res.send(documents)
+        }
     }
-})
+    );
+ 
+    
+//res.send('home', {points});
 })
 
 app.get("/login", (req, res) => {
-    const filebuf = fs.readFile("../src/components/login/login.js");
+    const filebuf = fs.readFile("../../components/Login/Login.js");
     res.type("html");
     res.send(filebuf);
 });
@@ -127,10 +127,16 @@ app.get('/api/info', (req, res) => {
 });
 
 app.post('/api/validate', (req, res) => {
-    let username = req.body.username
-    res.send('Username is ' + username)
-})
+    let name = req.body.name   
+    let points = req.body.points
+    let task = req.body.task
 
+    let newtask2 = new TaskModel({ name: name, task: task, points, points })
+    res.send("New add to database")
+    newtask2.save();
+    console.log(newtask2)
+    
+})
 
 
 app.listen(port, (req, res) => {

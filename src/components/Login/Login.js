@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const theme = createTheme();
 
@@ -22,9 +23,9 @@ export default function LogIn() {
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+      password: data.get('password')  
+      })   
+   };
 
   return (
     <ThemeProvider theme={theme}>
@@ -69,7 +70,7 @@ export default function LogIn() {
               control={<Checkbox value="remember" color="primary" />}
               label="Kom ihåg mig på den här enheten"
             />
-            <Button
+            <Button              
               type="submit"
               fullWidth
               variant="contained"

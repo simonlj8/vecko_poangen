@@ -14,6 +14,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
+
 const theme = createTheme();
 
 export default function SignUp() {
@@ -25,6 +26,7 @@ export default function SignUp() {
             password: data.get('password'),
         });
     };
+
 
     return (
         <ThemeProvider theme={theme}>
@@ -54,7 +56,7 @@ export default function SignUp() {
                                     fullWidth
                                     id="firstName"
                                     label="Förnamn"
-                                    autoFocus
+                                    autoFocus                                    
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
@@ -64,7 +66,7 @@ export default function SignUp() {
                                     id="lastName"
                                     label="Efternamn"
                                     name="lastName"
-                                    autoComplete="family-name"
+                                    autoComplete="family-name"                                   
                                 />
                             </Grid>
                             <Grid item xs={12}>
@@ -74,7 +76,7 @@ export default function SignUp() {
                                     id="email"
                                     label="Email Address"
                                     name="email"
-                                    autoComplete="email"
+                                    autoComplete="email"                                   
                                 />
                             </Grid>
                             <Grid item xs={12}>
@@ -85,7 +87,7 @@ export default function SignUp() {
                                     label="Lösenord"
                                     type="password"
                                     id="password"
-                                    autoComplete="new-password"
+                                    autoComplete="new-password"                                   
                                 />
                             </Grid>
                             <Grid item xs={12}>
