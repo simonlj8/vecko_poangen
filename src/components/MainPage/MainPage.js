@@ -5,6 +5,7 @@ import '../../App.css';
 import Button from 'react-bootstrap/Button';
 import Tasks from '../Tasks/Tasks'
 import './MainPage.css';
+import React from "react";
 
 
 function MainPage() {
